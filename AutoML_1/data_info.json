@@ -1,0 +1,103 @@
+{
+    "columns": [
+        "age",
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan",
+        "contact",
+        "month",
+        "day_of_week",
+        "duration",
+        "campaign",
+        "pdays",
+        "previous",
+        "poutcome",
+        "emp.var.rate",
+        "cons.price.idx",
+        "cons.conf.idx",
+        "euribor3m",
+        "nr.employed"
+    ],
+    "rows": 30891,
+    "cols": 20,
+    "target_is_numeric": false,
+    "columns_info": {
+        "age": [
+            "scale"
+        ],
+        "job": [
+            "categorical",
+            "few_categories"
+        ],
+        "marital": [
+            "categorical",
+            "few_categories"
+        ],
+        "education": [
+            "categorical",
+            "few_categories"
+        ],
+        "default": [
+            "categorical",
+            "few_categories"
+        ],
+        "housing": [
+            "categorical",
+            "few_categories"
+        ],
+        "loan": [
+            "categorical",
+            "few_categories"
+        ],
+        "contact": [
+            "categorical",
+            "few_categories"
+        ],
+        "month": [
+            "categorical",
+            "few_categories"
+        ],
+        "day_of_week": [
+            "categorical",
+            "few_categories"
+        ],
+        "duration": [
+            "scale"
+        ],
+        "campaign": [
+            "scale"
+        ],
+        "pdays": [
+            "scale"
+        ],
+        "previous": [],
+        "poutcome": [
+            "categorical",
+            "few_categories"
+        ],
+        "emp.var.rate": [
+            "scale"
+        ],
+        "cons.price.idx": [
+            "scale"
+        ],
+        "cons.conf.idx": [
+            "scale"
+        ],
+        "euribor3m": [
+            "scale"
+        ],
+        "nr.employed": [
+            "scale"
+        ]
+    },
+    "target_info": [
+        "convert_0_1"
+    ],
+    "n_features": 20,
+    "is_sample_weighted": false,
+    "n_classes": 2
+}
