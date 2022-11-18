@@ -1,0 +1,410 @@
+{
+    "uid": "c687077a-71e1-4b58-a454-051330f107a2",
+    "name": "4_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "job": {
+                            "admin.": 0,
+                            "blue-collar": 1,
+                            "entrepreneur": 2,
+                            "housemaid": 3,
+                            "management": 4,
+                            "retired": 5,
+                            "self-employed": 6,
+                            "services": 7,
+                            "student": 8,
+                            "technician": 9,
+                            "unemployed": 10,
+                            "unknown": 11
+                        },
+                        "marital": {
+                            "divorced": 0,
+                            "married": 1,
+                            "single": 2,
+                            "unknown": 3
+                        },
+                        "education": {
+                            "basic.4y": 0,
+                            "basic.6y": 1,
+                            "basic.9y": 2,
+                            "high.school": 3,
+                            "illiterate": 4,
+                            "professional.course": 5,
+                            "university.degree": 6,
+                            "unknown": 7
+                        },
+                        "default": {
+                            "no": 0,
+                            "unknown": 1,
+                            "yes": 2
+                        },
+                        "housing": {
+                            "no": 0,
+                            "unknown": 1,
+                            "yes": 2
+                        },
+                        "loan": {
+                            "no": 0,
+                            "unknown": 1,
+                            "yes": 2
+                        },
+                        "contact": {
+                            "cellular": 0,
+                            "telephone": 1
+                        },
+                        "month": {
+                            "apr": 0,
+                            "aug": 1,
+                            "dec": 2,
+                            "jul": 3,
+                            "jun": 4,
+                            "mar": 5,
+                            "may": 6,
+                            "nov": 7,
+                            "oct": 8,
+                            "sep": 9
+                        },
+                        "day_of_week": {
+                            "fri": 0,
+                            "mon": 1,
+                            "thu": 2,
+                            "tue": 3,
+                            "wed": 4
+                        },
+                        "poutcome": {
+                            "failure": 0,
+                            "nonexistent": 1,
+                            "success": 2
+                        }
+                    },
+                    "columns": [
+                        "job",
+                        "marital",
+                        "education",
+                        "default",
+                        "housing",
+                        "loan",
+                        "contact",
+                        "month",
+                        "day_of_week",
+                        "poutcome"
+                    ]
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        10.399015834856986,
+                        3.59715843561214,
+                        0.6107250946232463,
+                        2.138867677362801,
+                        0.40745007487982676,
+                        0.9853204410121482,
+                        0.7198983398570035,
+                        0.4807295198150096,
+                        2.3267009526459757,
+                        1.3958622838707375,
+                        257.35368509358966,
+                        2.7565905837180007,
+                        188.01661620559557,
+                        0.3630567519661016,
+                        1.5675598987139583,
+                        0.5760793024781736,
+                        4.631680436260163,
+                        1.7316175582378557,
+                        72.23901665241902
+                    ],
+                    "mean": [
+                        39.95826139502763,
+                        3.7102900552486187,
+                        1.174896408839779,
+                        3.7568197513812156,
+                        0.20990158839779005,
+                        1.0654350828729282,
+                        0.324067679558011,
+                        0.36252589779005523,
+                        4.233684392265193,
+                        2.020502417127072,
+                        257.7342455110497,
+                        2.5530473066298343,
+                        962.0174378453039,
+                        0.9310255524861878,
+                        0.08758632596685081,
+                        93.5757804299033,
+                        -40.50640970303867,
+                        3.6276123100828728,
+                        5167.231310428177
+                    ],
+                    "var": [
+                        108.13953033360634,
+                        12.939548810895577,
+                        0.3729851412025732,
+                        4.574754941267342,
+                        0.16601556351957641,
+                        0.9708563714763743,
+                        0.5182536197288697,
+                        0.23110087122156972,
+                        5.41353732304369,
+                        1.9484315155328316,
+                        66230.9192312505,
+                        7.598791646242747,
+                        35350.24796940222,
+                        0.1318102051481754,
+                        2.457244036056115,
+                        0.33186736274373907,
+                        21.45246366363514,
+                        2.9984993679976335,
+                        5218.4755269084735
+                    ],
+                    "n_samples_seen": 23168,
+                    "n_features_in": 19,
+                    "columns": [
+                        "age",
+                        "job",
+                        "marital",
+                        "education",
+                        "default",
+                        "housing",
+                        "loan",
+                        "contact",
+                        "month",
+                        "day_of_week",
+                        "duration",
+                        "campaign",
+                        "pdays",
+                        "poutcome",
+                        "emp.var.rate",
+                        "cons.price.idx",
+                        "cons.conf.idx",
+                        "euribor3m",
+                        "nr.employed"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "categorical_y": {
+                "no": 0,
+                "yes": 1
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "age": [
+                        "scale_normal"
+                    ],
+                    "job": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "marital": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "education": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "default": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "housing": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "loan": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "contact": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "month": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "day_of_week": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "duration": [
+                        "scale_normal"
+                    ],
+                    "campaign": [
+                        "scale_normal"
+                    ],
+                    "pdays": [
+                        "scale_normal"
+                    ],
+                    "poutcome": [
+                        "categorical_to_int",
+                        "scale_normal"
+                    ],
+                    "emp.var.rate": [
+                        "scale_normal"
+                    ],
+                    "cons.price.idx": [
+                        "scale_normal"
+                    ],
+                    "cons.conf.idx": [
+                        "scale_normal"
+                    ],
+                    "euribor3m": [
+                        "scale_normal"
+                    ],
+                    "nr.employed": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.1.3",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "2d18e0ec-a804-4563-8b9e-ad898b5f0f24",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 4,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "age": [
+                    "scale_normal"
+                ],
+                "job": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "marital": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "education": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "default": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "housing": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "loan": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "contact": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "month": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "day_of_week": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "duration": [
+                    "scale_normal"
+                ],
+                "campaign": [
+                    "scale_normal"
+                ],
+                "pdays": [
+                    "scale_normal"
+                ],
+                "poutcome": [
+                    "categorical_to_int",
+                    "scale_normal"
+                ],
+                "emp.var.rate": [
+                    "scale_normal"
+                ],
+                "cons.price.idx": [
+                    "scale_normal"
+                ],
+                "cons.conf.idx": [
+                    "scale_normal"
+                ],
+                "euribor3m": [
+                    "scale_normal"
+                ],
+                "nr.employed": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_2\\X.data",
+            "y_path": "AutoML_2\\y.data",
+            "results_path": "AutoML_2"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 4,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "4_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "4_Default_NeuralNetwork\\learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "4_Default_NeuralNetwork\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": 0.20301924381410896,
+    "train_time": 19.69258952140808,
+    "is_stacked": false,
+    "threshold": 0.5161277711777402
+}

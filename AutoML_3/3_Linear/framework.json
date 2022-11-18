@@ -1,0 +1,245 @@
+{
+    "uid": "21350bbd-08a3-49ad-a5cf-9bff75dc319f",
+    "name": "3_Linear",
+    "preprocessing": [
+        {
+            "missing_values": [
+                {
+                    "fill_method": "na_fill_median",
+                    "fill_params": {
+                        "NOX": 0.532
+                    },
+                    "datetime_columns": []
+                }
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        9.10150610313334,
+                        23.3979419090037,
+                        6.830507099123794,
+                        0.1176268639107439,
+                        0.7346151382979619,
+                        27.84408002062678,
+                        2.066308685822152,
+                        8.636770424468128,
+                        168.0769758279728,
+                        2.160092503128292,
+                        95.89144314536632,
+                        7.14930935708721
+                    ],
+                    "mean": [
+                        3.628923465608465,
+                        11.12037037037037,
+                        11.070132275132275,
+                        0.5565208994708994,
+                        6.293455026455027,
+                        68.07354497354498,
+                        3.753498677248677,
+                        9.489417989417989,
+                        405.0238095238095,
+                        18.43095238095238,
+                        352.9072751322752,
+                        12.621560846560849
+                    ],
+                    "var": [
+                        82.83741334537343,
+                        547.4636855771116,
+                        46.65582723118055,
+                        0.013836079113476663,
+                        0.5396594014165337,
+                        775.2927921950675,
+                        4.2696315851040705,
+                        74.59380336496739,
+                        28249.86980347695,
+                        4.66599962207105,
+                        9195.168868501021,
+                        51.11262428333473
+                    ],
+                    "n_samples_seen": 378,
+                    "n_features_in": 12,
+                    "columns": [
+                        "CRIM",
+                        "ZN",
+                        "INDUS",
+                        "NOX",
+                        "RM",
+                        "AGE",
+                        "DIS",
+                        "RAD",
+                        "TAX",
+                        "PTRATIO",
+                        "B",
+                        "LSTAT"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "scale_y": {
+                "scale": [
+                    9.456333053560131
+                ],
+                "mean": [
+                    22.693650793650797
+                ],
+                "var": [
+                    89.42223481985387
+                ],
+                "n_samples_seen": 378,
+                "n_features_in": 1,
+                "columns": [
+                    "target"
+                ],
+                "scale_method": "scale_normal"
+            },
+            "ml_task": "regression",
+            "params": {
+                "columns_preprocessing": {
+                    "CRIM": [
+                        "scale_normal"
+                    ],
+                    "ZN": [
+                        "scale_normal"
+                    ],
+                    "INDUS": [
+                        "scale_normal"
+                    ],
+                    "NOX": [
+                        "na_fill_median",
+                        "scale_normal"
+                    ],
+                    "RM": [
+                        "scale_normal"
+                    ],
+                    "AGE": [
+                        "scale_normal"
+                    ],
+                    "DIS": [
+                        "scale_normal"
+                    ],
+                    "RAD": [
+                        "scale_normal"
+                    ],
+                    "TAX": [
+                        "scale_normal"
+                    ],
+                    "PTRATIO": [
+                        "scale_normal"
+                    ],
+                    "B": [
+                        "scale_normal"
+                    ],
+                    "LSTAT": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "scale_normal"
+                ],
+                "ml_task": "regression"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.1.3",
+            "algorithm_name": "Linear Regression",
+            "algorithm_short_name": "Linear",
+            "uid": "a907a9e8-af84-40c1-bcc4-4367fb1e332a",
+            "params": {
+                "model_type": "Linear",
+                "ml_task": "regression",
+                "n_jobs": -1,
+                "seed": 1235,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "CRIM": [
+                    "scale_normal"
+                ],
+                "ZN": [
+                    "scale_normal"
+                ],
+                "INDUS": [
+                    "scale_normal"
+                ],
+                "NOX": [
+                    "na_fill_median",
+                    "scale_normal"
+                ],
+                "RM": [
+                    "scale_normal"
+                ],
+                "AGE": [
+                    "scale_normal"
+                ],
+                "DIS": [
+                    "scale_normal"
+                ],
+                "RAD": [
+                    "scale_normal"
+                ],
+                "TAX": [
+                    "scale_normal"
+                ],
+                "PTRATIO": [
+                    "scale_normal"
+                ],
+                "B": [
+                    "scale_normal"
+                ],
+                "LSTAT": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "scale_normal"
+            ],
+            "ml_task": "regression"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "X_path": "AutoML_3\\X.data",
+            "y_path": "AutoML_3\\y.data",
+            "results_path": "AutoML_3"
+        },
+        "learner": {
+            "model_type": "Linear",
+            "ml_task": "regression",
+            "n_jobs": -1,
+            "seed": 1235,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "regression",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "3_Linear\\learner_fold_0.linear"
+    ],
+    "predictions_fname": "3_Linear\\predictions_validation.csv",
+    "metric_name": "rmse",
+    "final_loss": 4.700933214427999,
+    "train_time": 7.258116006851196,
+    "is_stacked": false
+}

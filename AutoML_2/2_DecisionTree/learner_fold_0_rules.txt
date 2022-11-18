@@ -1,0 +1,16 @@
+if (nr.employed > 5087.65) and (duration <= 525.5) and (cons.conf.idx > -46.65) then class: no (proba: 98.75%) | based on 16,847 samples
+
+if (nr.employed > 5087.65) and (duration > 525.5) and (duration <= 836.5) then class: no (proba: 67.69%) | based on 1,433 samples
+
+if (nr.employed > 5087.65) and (duration <= 525.5) and (cons.conf.idx <= -46.65) then class: no (proba: 82.02%) | based on 1,346 samples
+
+if (nr.employed <= 5087.65) and (duration > 172.5) and (pdays > 16.5) then class: yes (proba: 52.24%) | based on 1,204 samples
+
+if (nr.employed <= 5087.65) and (duration <= 172.5) and (pdays > 7.5) then class: no (proba: 85.7%) | based on 888 samples
+
+if (nr.employed > 5087.65) and (duration > 525.5) and (duration > 836.5) then class: yes (proba: 57.96%) | based on 785 samples
+
+if (nr.employed <= 5087.65) and (duration > 172.5) and (pdays <= 16.5) then class: yes (proba: 80.23%) | based on 511 samples
+
+if (nr.employed <= 5087.65) and (duration <= 172.5) and (pdays <= 7.5) then class: no (proba: 52.6%) | based on 154 samples
+

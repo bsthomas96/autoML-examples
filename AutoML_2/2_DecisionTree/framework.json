@@ -1,0 +1,246 @@
+{
+    "uid": "bf196bf8-868d-40fb-a9da-55a9d1fc9ee2",
+    "name": "2_DecisionTree",
+    "preprocessing": [
+        {
+            "categorical": [
+                {
+                    "convert_method": "categorical_to_int",
+                    "convert_params": {
+                        "job": {
+                            "admin.": 0,
+                            "blue-collar": 1,
+                            "entrepreneur": 2,
+                            "housemaid": 3,
+                            "management": 4,
+                            "retired": 5,
+                            "self-employed": 6,
+                            "services": 7,
+                            "student": 8,
+                            "technician": 9,
+                            "unemployed": 10,
+                            "unknown": 11
+                        },
+                        "marital": {
+                            "divorced": 0,
+                            "married": 1,
+                            "single": 2,
+                            "unknown": 3
+                        },
+                        "education": {
+                            "basic.4y": 0,
+                            "basic.6y": 1,
+                            "basic.9y": 2,
+                            "high.school": 3,
+                            "illiterate": 4,
+                            "professional.course": 5,
+                            "university.degree": 6,
+                            "unknown": 7
+                        },
+                        "default": {
+                            "no": 0,
+                            "unknown": 1,
+                            "yes": 2
+                        },
+                        "housing": {
+                            "no": 0,
+                            "unknown": 1,
+                            "yes": 2
+                        },
+                        "loan": {
+                            "no": 0,
+                            "unknown": 1,
+                            "yes": 2
+                        },
+                        "contact": {
+                            "cellular": 0,
+                            "telephone": 1
+                        },
+                        "month": {
+                            "apr": 0,
+                            "aug": 1,
+                            "dec": 2,
+                            "jul": 3,
+                            "jun": 4,
+                            "mar": 5,
+                            "may": 6,
+                            "nov": 7,
+                            "oct": 8,
+                            "sep": 9
+                        },
+                        "day_of_week": {
+                            "fri": 0,
+                            "mon": 1,
+                            "thu": 2,
+                            "tue": 3,
+                            "wed": 4
+                        },
+                        "poutcome": {
+                            "failure": 0,
+                            "nonexistent": 1,
+                            "success": 2
+                        }
+                    },
+                    "columns": [
+                        "job",
+                        "marital",
+                        "education",
+                        "default",
+                        "housing",
+                        "loan",
+                        "contact",
+                        "month",
+                        "day_of_week",
+                        "poutcome"
+                    ]
+                }
+            ],
+            "categorical_y": {
+                "no": 0,
+                "yes": 1
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "job": [
+                        "categorical_to_int"
+                    ],
+                    "marital": [
+                        "categorical_to_int"
+                    ],
+                    "education": [
+                        "categorical_to_int"
+                    ],
+                    "default": [
+                        "categorical_to_int"
+                    ],
+                    "housing": [
+                        "categorical_to_int"
+                    ],
+                    "loan": [
+                        "categorical_to_int"
+                    ],
+                    "contact": [
+                        "categorical_to_int"
+                    ],
+                    "month": [
+                        "categorical_to_int"
+                    ],
+                    "day_of_week": [
+                        "categorical_to_int"
+                    ],
+                    "poutcome": [
+                        "categorical_to_int"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude",
+                    "categorical_to_int"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.1.3",
+            "algorithm_name": "Decision Tree",
+            "algorithm_short_name": "Decision Tree",
+            "uid": "8f45a471-0b24-4fa7-a984-760ab491cf3c",
+            "params": {
+                "model_type": "Decision Tree",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "criterion": "gini",
+                "max_depth": 3,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "trees_in_step": 1,
+            "train_cant_improve_limit": 0,
+            "max_steps": 1,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "job": [
+                    "categorical_to_int"
+                ],
+                "marital": [
+                    "categorical_to_int"
+                ],
+                "education": [
+                    "categorical_to_int"
+                ],
+                "default": [
+                    "categorical_to_int"
+                ],
+                "housing": [
+                    "categorical_to_int"
+                ],
+                "loan": [
+                    "categorical_to_int"
+                ],
+                "contact": [
+                    "categorical_to_int"
+                ],
+                "month": [
+                    "categorical_to_int"
+                ],
+                "day_of_week": [
+                    "categorical_to_int"
+                ],
+                "poutcome": [
+                    "categorical_to_int"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude",
+                "categorical_to_int"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_2\\X.data",
+            "y_path": "AutoML_2\\y.data",
+            "results_path": "AutoML_2"
+        },
+        "learner": {
+            "model_type": "Decision Tree",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "criterion": "gini",
+            "max_depth": 3,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "2_DecisionTree",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "2_DecisionTree\\learner_fold_0.decision_tree"
+    ],
+    "predictions_fname": "2_DecisionTree\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": 0.22085796399305324,
+    "train_time": 40.99714398384094,
+    "is_stacked": false,
+    "threshold": 0.49107015641038315
+}
